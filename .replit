@@ -1,0 +1,11 @@
+run = "python3 scripts/serve.py"
+entrypoint = "index.html"
+modules = ["python-3.11", "nodejs-22"]
+
+[deployment]
+run = ["sh", "-c", "python3 scripts/serve.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80

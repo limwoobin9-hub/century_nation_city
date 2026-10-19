@@ -1,0 +1,17 @@
+{
+  "name": "century-nation-city",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first nation and pixel city simulation",
+  "scripts": {
+    "dev": "python3 scripts/serve.py",
+    "start": "python3 scripts/serve.py",
+    "build": "npm run check && node scripts/build.mjs",
+    "test": "node --test",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

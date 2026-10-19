@@ -1,0 +1,65 @@
+{
+  "projection": "2:1 isometric",
+  "tile": [
+    64,
+    32
+  ],
+  "light": "upper-left",
+  "levels": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "format": "transparent PNG",
+  "buildings": [
+    "house",
+    "apartment",
+    "shop",
+    "farm",
+    "lumber",
+    "coal",
+    "iron",
+    "textile",
+    "steel",
+    "power",
+    "school",
+    "hospital",
+    "police",
+    "fire",
+    "park",
+    "station",
+    "port",
+    "warehouse",
+    "bank",
+    "university",
+    "townhall",
+    "machine",
+    "auto",
+    "chemical",
+    "refinery",
+    "museum",
+    "theatre",
+    "post",
+    "government",
+    "parliament",
+    "centralbank",
+    "shipyard",
+    "industrial",
+    "depot",
+    "oilwell"
+  ],
+  "ai": {
+    "type": "textile",
+    "variant": 0,
+    "file": "assets/ai-textile.png"
+  },
+  "originalSource": "src/render/sprites.js",
+  "pngCount": 564
+}

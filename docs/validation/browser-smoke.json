@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "New game starts from country/year UI with three 100×100 cities",
+      "ok": true
+    },
+    {
+      "name": "Roof selection opens detail; rename, preservation and upgrade change real building",
+      "ok": true
+    },
+    {
+      "name": "Actual construction tool/canvas click builds house, charges money and undo restores both",
+      "ok": true
+    },
+    {
+      "name": "Pointer drag lays a connected three-tile road",
+      "ok": true
+    },
+    {
+      "name": "Train animation advances while simulation is paused and stays on actual rail tiles",
+      "ok": true
+    },
+    {
+      "name": "Zoom, middle-button pan, service overlay and lit night view respond to real controls",
+      "ok": true
+    },
+    {
+      "name": "All nine panels render and tax slider updates the economic model",
+      "ok": true
+    },
+    {
+      "name": "Research starts through UI; twelve real simulation ticks advance a year and history",
+      "ok": true
+    },
+    {
+      "name": "Nation map switches city and builds a persistent intercity railway connection",
+      "ok": true
+    },
+    {
+      "name": "Slot save/load restores time and treasury; IndexedDB survives full browser reload",
+      "ok": true
+    },
+    {
+      "name": "User transparent PNG uploads, registers a building type and is constructed on the map",
+      "ok": true
+    },
+    {
+      "name": "390px mobile layout has no horizontal overflow; panels and building palette remain usable",
+      "ok": true
+    },
+    {
+      "name": "No browser JavaScript exceptions throughout all scenarios",
+      "ok": true
+    }
+  ],
+  "browserErrors": [],
+  "rendererStats": {
+    "tiles": 480,
+    "buildings": 76,
+    "fps": 30,
+    "terrainCacheHits": 676,
+    "terrainCacheEntries": 36,
+    "terrainCacheBytes": 491520
+  }
+}

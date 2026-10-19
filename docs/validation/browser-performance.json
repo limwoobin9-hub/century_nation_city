@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "checks": [
+    "Validated construction creates 600 buildings with connected residential roads",
+    "24 monthly ticks retain finite resources, employment, production, population and treasury",
+    "Wide view visibly renders at least 500 city buildings and continues painting",
+    "Real zoom/pan remains usable at 8×; 17 months pass with viewport culling",
+    "Actual 1850/1936 new-game UI produces distinct dates, visible historical levels and research",
+    "AI textile PNG is loaded and its seeded building is visible in both historical starting views",
+    "No browser JavaScript exceptions during construction, ticks, speed, camera or resets"
+  ],
+  "fixture": {
+    "initialBuildings": 117,
+    "buildings": 600,
+    "roadsAdded": 763,
+    "housesAdded": 483,
+    "connectedHouses": 574,
+    "totalHouses": 574,
+    "constructionMs": 264.5,
+    "fixture": "Treasury=5000000 and active-city resource stocks=100000; all roads/houses placed through validated game.place."
+  },
+  "tick24": {
+    "before": {
+      "year": 1900,
+      "month": 1
+    },
+    "after": {
+      "year": 1902,
+      "month": 1
+    },
+    "tick24Ms": 582.5,
+    "finite": true,
+    "history": 25,
+    "population": 8970
+  },
+  "renderMeasurements": [
+    {
+      "frames": 28,
+      "paintMeanMs": 48.57499999985365,
+      "paintP95Ms": 53.5,
+      "measuredPaintFps": 17.270052449784806,
+      "visibleTiles": 8474,
+      "visibleBuildings": 600,
+      "totalBuildings": 600,
+      "zoom": 0.3134645061728396,
+      "terrainCacheEntries": 42,
+      "terrainCacheBytes": 622592,
+      "terrainCacheHits": 9822,
+      "terrainCacheBudgetBytes": 8388608,
+      "scenario": "600 buildings, wide view, paused simulation"
+    },
+    {
+      "frames": 48,
+      "paintMeanMs": 5.81249999992239,
+      "paintP95Ms": 7.300000000745058,
+      "measuredPaintFps": 29.69046114971573,
+      "visibleTiles": 893,
+      "visibleBuildings": 560,
+      "totalBuildings": 600,
+      "zoom": 1.1232,
+      "terrainCacheEntries": 42,
+      "terrainCacheBytes": 622592,
+      "terrainCacheHits": 1280,
+      "terrainCacheBudgetBytes": 8388608,
+      "scenario": "600 buildings, zoom/pan and 8× simulation"
+    }
+  ],
+  "eightSpeedMonthsObserved": 17,
+  "historicalStarts": [
+    {
+      "year": 1850,
+      "month": 1,
+      "uiDate": "1850년 1월",
+      "country": "조선",
+      "maxLevel": 1,
+      "visibleMaxLevel": 1,
+      "research": 2,
+      "visibleTextile": true,
+      "aiImage": true
+    },
+    {
+      "year": 1936,
+      "month": 1,
+      "uiDate": "1936년 1월",
+      "country": "조선 (일제강점기)",
+      "maxLevel": 4,
+      "visibleMaxLevel": 4,
+      "research": 12,
+      "visibleTextile": true,
+      "aiImage": true
+    }
+  ],
+  "browserErrors": [],
+  "measurementScope": "One headless /usr/bin/chromium run at 1365×900, device scale 1, in this cloud execution environment. Synthetic funded save, 600 buildings in the active city. Paint timings include renderer work only; results are not a cross-hardware performance guarantee."
+}

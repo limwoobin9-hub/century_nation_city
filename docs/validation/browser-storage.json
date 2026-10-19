@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "three real IndexedDB manual slots and visible metadata",
+    "actual autosave timer writes the separate auto slot",
+    "all four slots restore city, date, treasury after page close and reload",
+    "transparent PNG upload, actual map construction, saved custom bytes and sprite restore",
+    "visible JSON export/download/import restores the complete game and uploaded image",
+    "corrupted checksum import shows an error and preserves the entire live game",
+    "truncated PNG with a recomputed checksum cannot replace the live game",
+    "visible slot deletion isolates the selected record"
+  ],
+  "browserErrors": []
+}

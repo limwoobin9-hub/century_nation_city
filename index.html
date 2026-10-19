@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#192f35"><meta name="description" content="당신의 선택이 도시의 풍경이 됩니다. 1850–1950 국가 경영과 픽셀 도시 건설 시뮬레이션.">
+  <title>CENTURY — Nations & Cities</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23192f35'/%3E%3Cpath d='M15 45V27l17-12 17 12v18H15' fill='%23d4b779'/%3E%3Cpath d='M28 45V32h8v13' fill='%23192f35'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CENTURY 홈"><span class="brand-mark">C<span>·</span></span><span>CENTURY<small>NATIONS & CITIES</small></span></a>
+    <button id="country-button" class="country-button" title="국가 개요"><span id="flag" class="flag"></span><span id="country-name">대한제국</span><span class="chevron">⌄</span></button>
+    <div class="top-stats"><div class="top-stat"><span>국가 재정</span><strong id="money">₩ 0</strong><small id="balance">월간 수지</small></div><div class="top-stat"><span>총인구</span><strong id="population">0</strong><small id="population-change">성장하는 국가</small></div><div class="top-stat optional-stat"><span>국민 만족도</span><strong id="happiness">0<em>%</em></strong><small id="happiness-label">안정</small></div></div>
+    <div class="time-controls"><div class="date"><strong id="date">1900년 1월</strong><small>산업화의 시대</small></div><div id="speed-controls" class="speeds" aria-label="시간 조절"><button data-speed="0" aria-label="일시정지">Ⅱ</button><button data-speed="1" class="active" aria-label="1배속">1×</button><button data-speed="2" aria-label="2배속">2×</button><button data-speed="4" aria-label="4배속">4×</button><button data-speed="8" aria-label="최고속도">8×</button></div></div>
+    <button id="save-menu" class="icon-button save-top" title="저장 및 불러오기" aria-label="저장 및 불러오기"></button>
+  </header>
+  <div class="workspace">
+    <nav id="sidebar" class="sidebar" aria-label="게임 메뉴"></nav>
+    <aside id="side-panel" class="side-panel hidden" aria-label="국가 관리"><div class="panel-header"><div><small id="panel-eyebrow">NATIONAL AFFAIRS</small><h2 id="panel-title">국가 개요</h2></div><button id="close-panel" class="icon-button" aria-label="패널 닫기">×</button></div><div id="panel-content" class="panel-content"></div></aside>
+    <main class="map-area" id="map-area">
+      <canvas id="city-canvas" tabindex="0" aria-label="아이소메트릭 도시 지도. 마우스로 건설, 가운데 버튼 또는 스페이스와 드래그로 이동, 휠로 확대·축소."></canvas>
+      <div class="city-heading"><div class="breadcrumb"><span id="city-country">대한제국</span><span>/</span><span>수도권</span></div><div class="city-title-row"><h1 id="city-name">한성</h1><span class="city-badge">CAPITAL CITY</span></div><p id="city-status"><span class="live-dot"></span> 작은 선택이, 새로운 시대를 만듭니다.</p></div>
+      <div class="map-top-actions"><select id="overlay-select" aria-label="지도 정보 레이어"><option value="normal">◈ 일반 지도</option><option value="population">인구 밀도</option><option value="landvalue">토지 가치</option><option value="unemployment">실업률</option><option value="industry">산업 생산</option><option value="pollution">대기 오염</option><option value="traffic">교통량</option><option value="education">교육 서비스</option><option value="health">의료 서비스</option><option value="power">전력 공급</option><option value="happiness">주거 만족도</option></select><button id="photo-mode" class="icon-button" title="사진 모드 · P" aria-label="사진 모드"></button><button id="help-button" class="icon-button" title="플레이 안내" aria-label="플레이 안내">?</button></div>
+      <div id="layer-legend" class="layer-legend hidden"><span>낮음</span><i></i><span>높음</span></div>
+      <aside id="detail-card" class="detail-card"></aside>
+      <div class="map-tools"><button id="zoom-in" aria-label="확대">+</button><span id="zoom-label">100%</span><button id="zoom-out" aria-label="축소">−</button><span class="tool-separator"></span><button id="center-map" title="도시 중심으로 이동" aria-label="중앙으로 이동">⌖</button><button id="grid-toggle" title="격자 표시 · G" aria-label="격자 표시">▦</button><button id="night-toggle" title="낮과 밤" aria-label="낮과 밤">☾</button></div>
+      <div id="build-palette" class="build-palette hidden"></div>
+      <div id="build-dock" class="build-dock" aria-label="건설 도구"></div>
+      <div class="map-footer"><span><i class="live-dot"></i> <span id="footer-status">도시 시뮬레이션 진행 중</span></span><span>휠 확대 · Space + 드래그 이동 · 우클릭 취소</span><button id="undo-button" title="건설 취소 · Ctrl+Z">↶ 실행 취소</button></div>
+      <div id="map-tooltip" class="map-tooltip hidden"></div>
+      <button id="exit-photo" class="photo-exit hidden">사진 모드 종료 · P</button>
+    </main>
+  </div>
+</div>
+<div id="toast-region" class="toast-region" aria-live="polite"></div>
+<div id="modal-root"></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
