@@ -1,5 +1,7 @@
 # CENTURY: Nations & Cities
 
+[게임 ZIP 다운로드](https://github.com/limwoobin9-hub/century_nation_city/raw/refs/heads/main/releases/CENTURY_Nations_and_Cities.zip) · [Vercel 프로젝트 가져오기](https://vercel.com/new)
+
 **당신의 선택이 도시의 풍경이 됩니다.** 1850–1950년을 배경으로, 국가 재정과 여러 픽셀 도시를 함께 운영하는 브라우저 게임입니다. HTML5, CSS, ES modules와 Canvas 2D로 제작했으며 실행 중 외부 API나 인터넷 연결을 요구하지 않습니다.
 
 ## 실행
@@ -90,10 +92,10 @@ npm run build
 
 - **Vercel**: 포함한 `vercel.json`은 `npm run build`를 실행하고 `dist`를 정적 배포합니다. 저장소 연결 또는 `dist` 업로드는 이용자 계정에서 별도로 수행해야 합니다.
 - **Replit**: 프로젝트를 가져온 뒤 Run을 누릅니다. `.replit`과 `PORT` 대응 정적 서버가 포함되어 있습니다.
-- **GitHub**: 이 폴더는 기존 `century_nation_city` 체크아웃입니다. 원격 push나 배포는 수행하지 않았습니다.
+- **GitHub**: 이 폴더는 기존 `century_nation_city` 체크아웃입니다. 게임 소스와 `releases/CENTURY_Nations_and_Cities.zip`을 `main`에 업로드했습니다.
 - **Supabase**: 기본 게임은 데이터베이스가 필요하지 않습니다. 로그인·클라우드 저장·사용자별 동기화는 구현하지 않았으며 Supabase에 접속하지 않습니다.
 
-배포 설정 파일 제공과 실제 계정 연결·서비스 배포는 서로 다릅니다. 이 결과물은 외부 계정이나 비밀 키 없이 로컬에서 플레이할 수 있습니다.
+배포 설정 파일 제공과 실제 계정 연결·서비스 배포는 서로 다릅니다. 이 결과물은 외부 계정이나 비밀 키 없이 로컬에서 플레이할 수 있습니다. Vercel 배포에는 본인의 Vercel 계정 연결이 필요합니다.
 
 ## 알려진 한계
 
